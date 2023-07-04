@@ -7,16 +7,11 @@ module.exports = () => {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     };
-    try{
+    try {
         mongoose.connect(process.env.DB, connectionParams);
         console.log('Connected to database SUCCESSFULLY');
-    }catch(error){
+    } catch (error) {
         console.log(error);
         console.log('ERROR connecting to database');
     }
 };
-
-
-
-
-

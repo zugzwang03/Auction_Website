@@ -13,7 +13,7 @@ async function updateAuction(auction) {
 }
 
 async function findSubscribersOfThisProduct(auction) {
-  // finds subscribers of the given auction product and saves it in the global string subscribers
+  // finds subscribers of the given auction product and returns it through the string subscribers
   auction = await updateAuction(auction);
   const subscribersOfThatProduct = auction.subscribers;
   const userDBOfSubscribers = await User.find({
